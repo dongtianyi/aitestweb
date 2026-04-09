@@ -1,0 +1,62 @@
+// Roodle 设计系统变量
+
+// 主色
+$primary-green: #7FFF00;      // 荧光绿 - 核心强调色
+$brand-red: #E31937;          // Logo 红 - 品牌元素
+$accent-blue: #0066FF;        // 蓝色 - 辅助交互
+
+// 背景层次
+$bg-primary: #000000;         // 纯黑主背景
+$bg-secondary: #0D0D0D;       // 深灰次级背景
+$bg-tertiary: #1A1A1A;        // 卡片背景
+$bg-elevated: #2C2C2C;        // 悬浮卡片
+
+// 文字系统
+$text-primary: #FFFFFF;
+$text-secondary: #A0A0A0;
+$text-muted: #666666;
+
+// 渐变
+$gradient-hero: linear-gradient(180deg, #000000 0%, #0D0D0D 100%);
+$gradient-green: linear-gradient(135deg, #7FFF00 0%, #5FD000 100%);
+$gradient-card: linear-gradient(145deg, #2C2C2C 0%, #1F1F1F 100%);
+
+// 阴影
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+$shadow-md: 0 4px 20px rgba(0, 0, 0, 0.6);
+$shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.8);
+$shadow-glow: 0 0 40px rgba(127, 255, 0, 0.3);
+
+// 字体家族
+$font-family: 'Noto Sans SC', '思源黑体', -apple-system, BlinkMacSystemFont, sans-serif;
+
+// 字号
+$text-xs: 12px;
+$text-sm: 14px;
+$text-base: 16px;
+$text-lg: 20px;
+$text-xl: 24px;
+$text-2xl: 32px;
+$text-3xl: 40px;
+$text-4xl: 48px;
+$text-5xl: 64px;
+
+// 字重
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// 圆角
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-2xl: 40px;
+
+// 响应式断点
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;

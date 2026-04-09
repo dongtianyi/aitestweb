@@ -1,0 +1,51 @@
+// 全局样式
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans SC', '思源黑体', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #000000;
+  color: #FFFFFF;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 工具类
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2C2C2C;
+  border-radius: 4px;
+  
+  &:hover {
+    background: #7FFF00;
+  }
+}
+
+// 选中文本
+::selection {
+  background: rgba(127, 255, 0, 0.3);
+  color: #FFFFFF;
+}
