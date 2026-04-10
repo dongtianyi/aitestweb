@@ -8,37 +8,49 @@
       
       <div class="features-grid">
         <div class="feature-card" ref="card1">
-          <div class="feature-icon">🤖</div>
+          <div class="feature-icon">
+            <Icon name="ai" />
+          </div>
           <h3 class="feature-title">AI 智能分析</h3>
           <p class="feature-description">基于机器学习的跑步姿态分析，实时监测步频、步幅、着地方式，预防运动损伤，提升跑步效率。</p>
         </div>
         
         <div class="feature-card" ref="card2">
-          <div class="feature-icon">📊</div>
+          <div class="feature-icon">
+            <Icon name="data" />
+          </div>
           <h3 class="feature-title">数据可视化</h3>
           <p class="feature-description">直观的数据图表，清晰展示训练趋势、心率区间、配速分布，让你对自己的表现一目了然。</p>
         </div>
         
         <div class="feature-card" ref="card3">
-          <div class="feature-icon">🎯</div>
+          <div class="feature-icon">
+            <Icon name="target" />
+          </div>
           <h3 class="feature-title">个性化训练</h3>
           <p class="feature-description">根据你的目标和水平，AI 生成专属训练计划，从 5K 到全马，科学进阶，稳步提升。</p>
         </div>
         
         <div class="feature-card" ref="card4">
-          <div class="feature-icon">🎵</div>
+          <div class="feature-icon">
+            <Icon name="music" />
+          </div>
           <h3 class="feature-title">节拍器训练</h3>
           <p class="feature-description">智能节拍器匹配你的目标步频，配合音乐节奏，让训练更有趣，效率更高。</p>
         </div>
         
         <div class="feature-card" ref="card5">
-          <div class="feature-icon">👥</div>
+          <div class="feature-icon">
+            <Icon name="social" />
+          </div>
           <h3 class="feature-title">社交挑战</h3>
           <p class="feature-description">加入跑团，参与挑战，与好友比拼，让跑步不再孤单，动力满满。</p>
         </div>
         
         <div class="feature-card" ref="card6">
-          <div class="feature-icon">🌙</div>
+          <div class="feature-icon">
+            <Icon name="moon" />
+          </div>
           <h3 class="feature-title">夜间模式</h3>
           <p class="feature-description">精心设计的深色界面，夜间跑步不刺眼，省电更持久。</p>
         </div>
@@ -49,6 +61,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import Icon from './Icon.vue'
 
 const cards = [
   ref<HTMLElement | null>(null),
@@ -225,11 +238,17 @@ onUnmounted(() => {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 48px;
       margin-bottom: 36px;
       position: relative;
       z-index: 1;
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      color: $void-black;
+      
+      :deep(svg) {
+        width: 48px;
+        height: 48px;
+        stroke-width: 1.5;
+      }
     }
     
     .feature-title {

@@ -61,22 +61,30 @@
                 </div>
                 <div class="app-stats-grid">
                   <div class="app-stat-card">
-                    <div class="app-stat-icon">⚡</div>
+                    <div class="app-stat-icon">
+                      <Icon name="pace" />
+                    </div>
                     <div class="app-stat-value">5'30"</div>
                     <div class="app-stat-label">配速</div>
                   </div>
                   <div class="app-stat-card">
-                    <div class="app-stat-icon">🔥</div>
+                    <div class="app-stat-icon">
+                      <Icon name="fire" />
+                    </div>
                     <div class="app-stat-value">420</div>
                     <div class="app-stat-label">卡路里</div>
                   </div>
                   <div class="app-stat-card">
-                    <div class="app-stat-icon">❤️</div>
+                    <div class="app-stat-icon">
+                      <Icon name="heart" />
+                    </div>
                     <div class="app-stat-value">142</div>
                     <div class="app-stat-label">心率</div>
                   </div>
                   <div class="app-stat-card">
-                    <div class="app-stat-icon">👟</div>
+                    <div class="app-stat-icon">
+                      <Icon name="footsteps" />
+                    </div>
                     <div class="app-stat-value">180</div>
                     <div class="app-stat-label">步频</div>
                   </div>
@@ -87,12 +95,26 @@
           
           <!-- 漂浮卡片 -->
           <div class="floating-card floating-card-1">
-            <div class="floating-card-icon">📈</div>
+            <div class="floating-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 6l-9.5 9.5-5-5L1 18"/>
+                <path d="M17 6h6v6"/>
+              </svg>
+            </div>
             <div class="floating-card-value">+23%</div>
             <div class="floating-card-label">配速提升</div>
           </div>
           <div class="floating-card floating-card-2">
-            <div class="floating-card-icon">🏆</div>
+            <div class="floating-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                <path d="M4 22h16"/>
+                <path d="M10 14.66V18c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                <path d="M14 14.66V18c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+              </svg>
+            </div>
             <div class="floating-card-value">12</div>
             <div class="floating-card-label">个人纪录</div>
           </div>
@@ -104,6 +126,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import Icon from './Icon.vue'
 
 const stat1 = ref<HTMLElement | null>(null)
 const stat2 = ref<HTMLElement | null>(null)
@@ -514,8 +537,17 @@ onUnmounted(() => {
         text-align: center;
         
         .app-stat-icon {
-          font-size: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-bottom: 8px;
+          color: $volt-yellow;
+          
+          :deep(svg) {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2;
+          }
         }
         
         .app-stat-value {
