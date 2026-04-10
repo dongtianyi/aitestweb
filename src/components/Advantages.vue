@@ -2,28 +2,35 @@
   <section id="advantages" class="advantages">
     <div class="section-container">
       <div class="section-header">
+        <span class="section-tag">核心优势</span>
         <h2 class="section-title">为什么选择 Roodle</h2>
-        <p class="section-subtitle">专业 · 易用 · 可信赖</p>
       </div>
       
       <div class="advantages-grid">
-        <div class="advantage-item">
-          <div class="advantage-number">01</div>
+        <div class="advantage-card">
+          <div class="card-number">01</div>
+          <div class="card-icon">🎯</div>
           <h3>专业数据分析</h3>
           <p>基于运动科学的多维度分析模型</p>
         </div>
-        <div class="advantage-item">
-          <div class="advantage-number">02</div>
+        
+        <div class="advantage-card">
+          <div class="card-number">02</div>
+          <div class="card-icon">✨</div>
           <h3>极简操作体验</h3>
           <p>上手即用，无需学习成本</p>
         </div>
-        <div class="advantage-item">
-          <div class="advantage-number">03</div>
-          <h3>全平台支持</h3>
-          <p>iOS / Android 完美适配</p>
+        
+        <div class="advantage-card">
+          <div class="card-number">03</div>
+          <div class="card-icon">📱</div>
+          <h3>iOS 原生体验</h3>
+          <p>流畅动画，极致性能</p>
         </div>
-        <div class="advantage-item">
-          <div class="advantage-number">04</div>
+        
+        <div class="advantage-card">
+          <div class="card-number">04</div>
+          <div class="card-icon">🚀</div>
           <h3>持续更新迭代</h3>
           <p>每月新功能，倾听用户声音</p>
         </div>
@@ -40,59 +47,117 @@
 
 .advantages {
   padding: 120px 0;
-  background: $bg-primary;
+  background: linear-gradient(180deg, $bg-primary 0%, $bg-secondary 100%);
+  position: relative;
   
   .section-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+    position: relative;
+    z-index: 1;
   }
   
   .section-header {
     text-align: center;
     margin-bottom: 80px;
     
-    .section-title {
-      font-size: $text-4xl;
-      font-weight: $font-bold;
-      color: $text-primary;
-      margin-bottom: 16px;
+    .section-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(227, 25, 55, 0.15), rgba(196, 22, 47, 0.1));
+      border: 1px solid rgba(227, 25, 55, 0.3);
+      color: $text-accent;
+      padding: 8px 20px;
+      border-radius: $radius-full;
+      font-size: $text-sm;
+      font-weight: $font-semibold;
+      margin-bottom: 20px;
     }
     
-    .section-subtitle {
-      font-size: $text-xl;
-      color: $text-secondary;
+    .section-title {
+      font-size: $text-5xl;
+      font-weight: $font-bold;
+      color: $text-primary;
+      line-height: 1.2;
+      
+      @media (max-width: $breakpoint-md) {
+        font-size: $text-4xl;
+      }
     }
   }
   
   .advantages-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: $spacing-lg;
     
     @media (max-width: $breakpoint-lg) {
       grid-template-columns: repeat(2, 1fr);
     }
     
-    .advantage-item {
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+    
+    .advantage-card {
+      background: linear-gradient(145deg, $bg-elevated 0%, $bg-tertiary 100%);
+      border-radius: $radius-2xl;
+      padding: 40px 32px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       text-align: center;
+      transition: all $transition-base;
+      position: relative;
+      overflow: hidden;
       
-      .advantage-number {
-        font-size: 64px;
+      &:hover {
+        transform: translateY(-8px);
+        border-color: rgba(227, 25, 55, 0.3);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(227, 25, 55, 0.08) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity $transition-base;
+      }
+      
+      &:hover::before {
+        opacity: 1;
+      }
+      
+      .card-number {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        font-size: 48px;
         font-weight: $font-bold;
-        color: rgba(127, 255, 0, 0.2);
-        margin-bottom: 16px;
+        color: rgba(227, 25, 55, 0.15);
+        line-height: 1;
+      }
+      
+      .card-icon {
+        font-size: 48px;
+        margin-bottom: 24px;
+        margin-top: 8px;
       }
       
       h3 {
         font-size: $text-xl;
         color: $text-primary;
         margin-bottom: 12px;
+        font-weight: $font-semibold;
       }
       
       p {
         color: $text-secondary;
         font-size: $text-base;
+        line-height: 1.6;
       }
     }
   }

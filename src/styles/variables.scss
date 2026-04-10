@@ -1,45 +1,92 @@
-// Roodle 设计系统变量
+// Roodle 设计系统变量 - 赛博运动美学
+// 基于 frontend-design skill 原则
 
-// 主色
-$primary-green: #7FFF00;      // 荧光绿 - 核心强调色
-$brand-red: #E31937;          // Logo 红 - 品牌元素
-$accent-blue: #0066FF;        // 蓝色 - 辅助交互
+// 主色 - 火焰渐变系
+$volt-yellow: #FFE600;        // 能量黄
+$electric-orange: #FF5500;    // 电光橙
+$plasma-red: #FF1E3F;         // 等离子红
 
-// 背景层次
-$bg-primary: #000000;         // 纯黑主背景
-$bg-secondary: #0D0D0D;       // 深灰次级背景
-$bg-tertiary: #1A1A1A;        // 卡片背景
-$bg-elevated: #2C2C2C;        // 悬浮卡片
+// 辅助色 - 科技渐变系
+$cyber-blue: #00F0FF;         // 赛博蓝
+$neon-purple: #BD00FF;        // 霓虹紫
+$matrix-green: #00FF94;       // 矩阵绿
+
+// 传统红色系（保留兼容）
+$primary-red: #E31937;
+$primary-red-dark: #C4162F;
+$brand-red: #E31937;
+
+// 辅助色（保留兼容）
+$accent-purple: #5E5CE6;
+$accent-blue: #0A84FF;
+$accent-orange: #FF9500;
+
+// 背景层次 - 深邃黑色系（赛博美学）
+$void-black: #050507;         // 虚空黑
+$deep-space: #0A0A0F;         // 深空
+$nebula: #12121A;             // 星云
+$cosmic: #1A1A25;             // 宇宙
+$starlight: #2A2A35;          // 星光
+
+// 背景层次 - 保留兼容
+$bg-primary: #000000;
+$bg-secondary: #0A0A0A;
+$bg-tertiary: #141414;
+$bg-elevated: #1C1C1E;
+$bg-glass: rgba(28, 28, 30, 0.7);
 
 // 文字系统
 $text-primary: #FFFFFF;
-$text-secondary: #A0A0A0;
-$text-muted: #666666;
+$text-soft: #F3F4F6;          // 柔白
+$text-secondary: #9CA3AF;     // 月光灰
+$text-muted: #6B7280;         // 星尘灰
+$text-accent: #FFE600;        // 能量黄（新）
+$text-accent-red: #E31937;    // 红色点缀
 
-// 渐变
-$gradient-hero: linear-gradient(180deg, #000000 0%, #0D0D0D 100%);
-$gradient-green: linear-gradient(135deg, #7FFF00 0%, #5FD000 100%);
-$gradient-card: linear-gradient(145deg, #2C2C2C 0%, #1F1F1F 100%);
+// 兼容旧变量
+$pure-white: #FFFFFF;
 
-// 阴影
-$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-$shadow-md: 0 4px 20px rgba(0, 0, 0, 0.6);
-$shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.8);
-$shadow-glow: 0 0 40px rgba(127, 255, 0, 0.3);
+// 渐变 - 赛博运动美学
+$gradient-fire: linear-gradient(135deg, $volt-yellow 0%, $electric-orange 50%, $plasma-red 100%);
+$gradient-ice: linear-gradient(135deg, $cyber-blue 0%, $neon-purple 100%);
+$gradient-growth: linear-gradient(135deg, $matrix-green 0%, $cyber-blue 100%);
+$gradient-void: linear-gradient(180deg, $void-black 0%, $deep-space 50%, $nebula 100%);
 
-// 字体家族
-$font-family: 'Noto Sans SC', '思源黑体', -apple-system, BlinkMacSystemFont, sans-serif;
+// 渐变 - 保留兼容
+$gradient-hero: linear-gradient(180deg, #000000 0%, #0A0A0A 50%, #141414 100%);
+$gradient-red: linear-gradient(135deg, #E31937 0%, #C4162F 100%);
+$gradient-card: linear-gradient(145deg, #1C1C1E 0%, #141414 100%);
+$gradient-glow: linear-gradient(135deg, rgba(227, 25, 55, 0.15) 0%, rgba(196, 22, 47, 0.05) 100%);
 
-// 字号
+// 阴影 - 精致柔和
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+$shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.6);
+$shadow-glow: 0 0 40px rgba(227, 25, 55, 0.3);
+$shadow-red: 0 8px 32px rgba(227, 25, 55, 0.4);
+
+// 毛玻璃效果
+$backdrop-blur: blur(20px) saturate(180%);
+
+// 字体家族 - 赛博运动美学
+$font-display: 'Bebas Neue', 'Noto Sans SC', '思源黑体', sans-serif;  // 标题字体
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;                 // 数据/代码
+$font-body: 'Noto Sans SC', '思源黑体', -apple-system, BlinkMacSystemFont, sans-serif;  // 正文
+
+// 字体家族 - 保留兼容
+$font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Noto Sans SC', '思源黑体', sans-serif;
+
+// 字号 - 优化后的排版系统
 $text-xs: 12px;
 $text-sm: 14px;
 $text-base: 16px;
-$text-lg: 20px;
-$text-xl: 24px;
-$text-2xl: 32px;
-$text-3xl: 40px;
+$text-lg: 18px;
+$text-xl: 22px;
+$text-2xl: 28px;
+$text-3xl: 36px;
 $text-4xl: 48px;
 $text-5xl: 64px;
+$text-display: 72px;
 
 // 字重
 $font-light: 300;
@@ -48,15 +95,32 @@ $font-medium: 500;
 $font-semibold: 600;
 $font-bold: 700;
 
-// 圆角
+// 圆角 - iOS 风格
 $radius-sm: 8px;
 $radius-md: 12px;
 $radius-lg: 16px;
-$radius-xl: 24px;
-$radius-2xl: 40px;
+$radius-xl: 20px;
+$radius-2xl: 28px;
+$radius-full: 9999px;
+
+// 间距 - 非线性的易用比例
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+$spacing-3xl: 64px;
+$spacing-4xl: 96px;
+$spacing-5xl: 128px;
 
 // 响应式断点
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1440px;
+
+// 动画
+$transition-fast: 0.15s ease;
+$transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,32 +1,24 @@
 <template>
   <section id="download" class="download">
-    <div class="download-container">
-      <h2 class="download-title">开始你的数据化训练之旅</h2>
-      <p class="download-subtitle">现在下载，立即体验专业跑步分析</p>
+    <div class="download-content">
+      <h2 class="download-title">开始你的<br/>跑步之旅</h2>
+      <p class="download-subtitle">立即下载 Roodle，加入 50,000+ 跑者的行列，用科技提升你的每一步。</p>
       
-      <div class="download-buttons">
+      <div class="store-buttons">
         <a href="#" class="store-btn">
-          <div class="store-icon">🍎</div>
-          <div class="store-info">
-            <span>Download on the</span>
-            <strong>App Store</strong>
+          <span class="store-btn-icon">🍎</span>
+          <div class="store-btn-text">
+            <div class="store-btn-label">Download on the</div>
+            <div class="store-btn-name">App Store</div>
           </div>
         </a>
-        
         <a href="#" class="store-btn">
-          <div class="store-icon">▶️</div>
-          <div class="store-info">
-            <span>GET IT ON</span>
-            <strong>Google Play</strong>
+          <span class="store-btn-icon">🤖</span>
+          <div class="store-btn-text">
+            <div class="store-btn-label">GET IT ON</div>
+            <div class="store-btn-name">Google Play</div>
           </div>
         </a>
-      </div>
-      
-      <div class="download-qr">
-        <div class="qr-placeholder">
-          <span>二维码</span>
-        </div>
-        <span>扫码下载</span>
       </div>
     </div>
   </section>
@@ -39,101 +31,115 @@
 @import '../styles/variables.scss';
 
 .download {
-  padding: 120px 0;
-  background: linear-gradient(180deg, $bg-secondary 0%, $bg-primary 100%);
+  padding: 192px 48px;
+  background: $gradient-fire;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  overflow: hidden;
   
-  .download-container {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    padding: 120px 24px;
+  }
+  
+  .download-content {
+    position: relative;
+    z-index: 10;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 24px;
-    text-align: center;
   }
   
   .download-title {
-    font-size: $text-4xl;
-    font-weight: $font-bold;
-    color: $text-primary;
-    margin-bottom: 16px;
+    font-family: 'Bebas Neue', 'Noto Sans SC', sans-serif;
+    font-size: clamp(48px, 7vw, 96px);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: $void-black;
+    margin-bottom: 24px;
+    line-height: 1;
   }
   
   .download-subtitle {
-    font-size: $text-xl;
-    color: $text-secondary;
-    margin-bottom: 60px;
+    font-size: 20px;
+    color: rgba(5, 5, 7, 0.8);
+    margin-bottom: 56px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media (max-width: $breakpoint-sm) {
+      font-size: 18px;
+    }
   }
   
-  .download-buttons {
+  .store-buttons {
     display: flex;
     justify-content: center;
     gap: 24px;
-    margin-bottom: 60px;
-    
-    @media (max-width: $breakpoint-sm) {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .store-btn {
-      background: $bg-elevated;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      padding: 12px 32px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        border-color: $primary-green;
-        transform: translateY(-4px);
-      }
-      
-      .store-icon {
-        font-size: 32px;
-      }
-      
-      .store-info {
-        text-align: left;
-        
-        span {
-          display: block;
-          font-size: $text-xs;
-          color: $text-muted;
-        }
-        
-        strong {
-          font-size: $text-lg;
-          color: $text-primary;
-        }
-      }
-    }
+    flex-wrap: wrap;
   }
   
-  .download-qr {
-    display: inline-block;
+  .store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 36px;
+    background: $void-black;
+    color: $pure-white;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
-    .qr-placeholder {
-      width: 200px;
-      height: 200px;
-      background: $bg-elevated;
-      border-radius: 16px;
-      border: 2px solid rgba(127, 255, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    &:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      padding: 16px 28px;
+      gap: 12px;
+    }
+    
+    .store-btn-icon {
+      font-size: 32px;
       
-      span {
-        color: $text-muted;
-        font-size: $text-base;
+      @media (max-width: $breakpoint-sm) {
+        font-size: 28px;
       }
     }
     
-    > span {
-      display: block;
-      margin-top: 16px;
+    .store-btn-text {
+      text-align: left;
+    }
+    
+    .store-btn-label {
+      font-family: $font-mono;
+      font-size: 10px;
       color: $text-secondary;
-      font-size: $text-base;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    
+    .store-btn-name {
+      font-family: 'Bebas Neue', 'Noto Sans SC', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      
+      @media (max-width: $breakpoint-sm) {
+        font-size: 20px;
+      }
     }
   }
 }
