@@ -1,0 +1,114 @@
+// 全局样式 - StressWatch 风格（iOS 极简）
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Noto Sans SC', sans-serif;
+  background: #F8F7F6;
+  color: #1C1C1E;
+  line-height: 1.5;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+// 可点击元素
+a, button, .feature-card, .store-btn, [role="button"] {
+  cursor: pointer;
+}
+
+// 容器
+.container {
+  max-width: 1116px;
+  margin: 0 auto;
+  padding: 0 16px;
+  
+  @media (max-width: 1024px) {
+    padding: 0 24px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+// 工具类
+.text-gradient {
+  background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// iOS 风格按钮
+.btn-ios {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: #007AFF;
+  color: #FFFFFF;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  
+  &:hover {
+    background: #0056CC;
+    transform: scale(1.02);
+  }
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// iOS 风格卡片
+.card-ios {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+// 毛玻璃效果
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+// 滚动条隐藏
+::-webkit-scrollbar {
+  display: none;
+}
+
+// 选中文本
+::selection {
+  background: rgba(0, 122, 255, 0.2);
+}
+
+// 焦点样式
+:focus-visible {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}
+
+// 图片
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

@@ -3,12 +3,18 @@
     <div class="footer-container">
       <div class="footer-content">
         <div class="footer-brand">
-          <div class="footer-logo">ROODLE</div>
-          <p class="footer-tagline">Made with ❤️ for runners.</p>
+          <div class="footer-logo">Roodle</div>
+          <p class="footer-tagline">让每一步都有数据支撑</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#" class="footer-link">隐私政策</a>
+          <a href="#" class="footer-link">使用条款</a>
+          <a href="#" class="footer-link">联系我们</a>
         </div>
         
         <div class="footer-copy">
-          © 2026 Roodle. All rights reserved.
+          © 2026 Roodle. Made with ❤️ for runners.
         </div>
       </div>
     </div>
@@ -18,61 +24,75 @@
 <script setup lang="ts">
 </script>
 
-<style scoped lang="scss">
-@import '../styles/variables.scss';
+<style lang="scss">
+@import '../styles/variables-stresswatch.scss';
 
 .footer {
-  padding: 80px 48px;
-  background: $void-black;
-  border-top: 1px solid $cosmic;
-  position: relative;
-  z-index: 1;
-  
-  @media (max-width: $breakpoint-md) {
-    padding: 60px 24px;
-  }
+  padding: 60px 0;
+  background: $bg-secondary;
+  border-top: 1px solid $border-light;
   
   .footer-container {
-    max-width: 1400px;
+    max-width: 1116px;
     margin: 0 auto;
+    padding: 0 24px;
+    
+    @media (max-width: $breakpoint-md) {
+      padding: 0 16px;
+    }
   }
   
   .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
     
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-sm) {
       flex-direction: column;
-      gap: 24px;
       text-align: center;
     }
   }
   
   .footer-brand {
     .footer-logo {
-      font-family: 'Bebas Neue', 'Noto Sans SC', sans-serif;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
-      letter-spacing: 0.1em;
-      background: $gradient-fire;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: $text-primary;
+      letter-spacing: -0.02em;
     }
     
     .footer-tagline {
+      font-size: $text-sm;
       color: $text-secondary;
-      font-size: 14px;
       margin-top: 8px;
     }
   }
   
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    
+    @media (max-width: $breakpoint-sm) {
+      gap: 16px;
+    }
+    
+    .footer-link {
+      font-size: $text-sm;
+      color: $text-secondary;
+      text-decoration: none;
+      transition: color $transition-base;
+      
+      &:hover {
+        color: $text-primary;
+      }
+    }
+  }
+  
   .footer-copy {
-    font-family: $font-mono;
-    color: $text-secondary;
-    font-size: 13px;
-    letter-spacing: 0.1em;
+    font-size: $text-xs;
+    color: $text-tertiary;
   }
 }
 </style>

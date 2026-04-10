@@ -1,6 +1,9 @@
 <template>
   <section class="hero">
     <div class="hero-container">
+      <!-- 导航占位 -->
+      <div class="hero-spacer"></div>
+      
       <!-- 主内容 -->
       <div class="hero-content">
         <div class="hero-badge">
@@ -44,7 +47,7 @@
           <div class="trust-divider"></div>
           <div class="trust-item">
             <span class="trust-number">1M+</span>
-            <span class="trust-label">累计跑量 KM</span>
+            <span class="trust-label">累计跑量</span>
           </div>
         </div>
       </div>
@@ -74,10 +77,13 @@
   background: $bg-primary;
   position: relative;
   overflow: hidden;
-  padding-top: 72px;
   
-  @media (max-width: $breakpoint-md) {
-    padding-top: 60px;
+  .hero-spacer {
+    height: 80px;
+    
+    @media (max-width: $breakpoint-md) {
+      height: 60px;
+    }
   }
   
   .hero-container {

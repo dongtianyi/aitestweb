@@ -1,0 +1,83 @@
+// Roodle 设计系统 - StressWatch 风格（iOS 极简）
+
+// 主色 - iOS 风格
+$primary-blue: #007AFF;        // iOS 蓝
+$primary-orange: #FF9500;      // iOS 橙
+$primary-green: #34C759;       // iOS 绿
+$primary-red: #FF3B30;         // iOS 红
+
+// 背景色 - 浅色系
+$bg-primary: #F8F7F6;          // 米白主背景
+$bg-secondary: #FFFFFF;        // 纯白卡片
+$bg-tertiary: #F2F2F7;         // 浅灰分组
+
+// 文字色
+$text-primary: #1C1C1E;        // 深黑标题
+$text-secondary: #8E8E93;      // 中灰副标题
+$text-tertiary: #C7C7CC;       // 浅灰辅助
+
+// 边框和分隔线
+$border-light: rgba(0, 0, 0, 0.1);
+$border-medium: rgba(0, 0, 0, 0.15);
+
+// 阴影 - iOS 风格
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+$shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.16);
+
+// 毛玻璃效果
+$backdrop-blur: blur(20px) saturate(180%);
+$glass-bg: rgba(255, 255, 255, 0.7);
+
+// 圆角 - iOS 风格
+$radius-sm: 10px;
+$radius-md: 14px;
+$radius-lg: 20px;
+$radius-xl: 28px;
+$radius-2xl: 36px;
+$radius-full: 9999px;
+
+// 字体家族 - iOS 系统
+$font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+
+// 字号 - iOS 排版
+$text-xs: 11px;
+$text-sm: 13px;
+$text-base: 15px;
+$text-lg: 17px;
+$text-xl: 20px;
+$text-2xl: 24px;
+$text-3xl: 28px;
+$text-4xl: 34px;
+$text-5xl: 40px;
+$text-display: 48px;
+$text-hero: 56px;
+
+// 字重
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// 间距
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+$spacing-3xl: 64px;
+$spacing-4xl: 96px;
+
+// 响应式断点
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+
+// 动画
+$transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);

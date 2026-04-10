@@ -2,8 +2,7 @@
   <nav class="navbar" :class="{ 'scrolled': isScrolled }">
     <div class="navbar-container">
       <a href="#" class="logo">
-        <span class="logo-text">ROODLE</span>
-        <span class="logo-sub">AI POWERED</span>
+        <span class="logo-text">Roodle</span>
       </a>
       
       <ul class="nav-links">
@@ -24,7 +23,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const isScrolled = ref(false)
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 100
+  isScrolled.value = window.scrollY > 50
 }
 
 onMounted(() => {
@@ -36,71 +35,55 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped lang="scss">
-@import '../styles/variables.scss';
+<style lang="scss">
+@import '../styles/variables-stresswatch.scss';
 
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
-  background: linear-gradient(180deg, rgba(5, 5, 7, 0.98) 0%, rgba(5, 5, 7, 0) 100%);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid transparent;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all $transition-base;
   
   &.scrolled {
-    background: rgba(5, 5, 7, 0.98);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
   }
   
   .navbar-container {
-    max-width: 1400px;
+    max-width: 1116px;
     margin: 0 auto;
-    padding: 0 48px;
+    padding: 0 24px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     
     @media (max-width: $breakpoint-md) {
-      padding: 0 24px;
+      padding: 0 16px;
     }
   }
   
   .logo {
     text-decoration: none;
-    display: flex;
-    flex-direction: column;
     
     .logo-text {
-      font-family: 'Bebas Neue', 'Noto Sans SC', sans-serif;
-      font-size: 36px;
+      font-size: 24px;
       font-weight: 700;
-      letter-spacing: 0.15em;
-      background: $gradient-fire;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-    }
-    
-    .logo-sub {
-      font-family: $font-mono;
-      font-size: 9px;
-      color: $cyber-blue;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      margin-top: 2px;
+      color: $text-primary;
+      letter-spacing: -0.02em;
     }
   }
   
   .nav-links {
     display: flex;
-    gap: 56px;
+    gap: 32px;
     list-style: none;
     
     @media (max-width: $breakpoint-md) {
@@ -110,69 +93,34 @@ onUnmounted(() => {
     a {
       color: $text-secondary;
       text-decoration: none;
-      font-size: 13px;
+      font-size: $text-sm;
       font-weight: $font-medium;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
       transition: all $transition-base;
-      position: relative;
-      
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: $gradient-fire;
-        transition: width $transition-base;
-      }
       
       &:hover {
         color: $text-primary;
-        
-        &::after {
-          width: 100%;
-        }
       }
     }
   }
   
   .btn-download {
-    background: $gradient-fire;
-    color: $void-black;
-    padding: 14px 28px;
-    border-radius: 100px;
+    background: #007AFF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: $text-sm;
     transition: all $transition-base;
-    position: relative;
-    overflow: hidden;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-      transition: left 0.5s ease;
-    }
-    
-    &:hover::before {
-      left: 100%;
-    }
     
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 40px rgba(255, 85, 0, 0.4);
+      background: #0056CC;
+      transform: translateY(-1px);
     }
     
     @media (max-width: $breakpoint-sm) {
-      padding: 10px 20px;
-      font-size: 13px;
+      padding: 8px 16px;
+      font-size: $text-xs;
     }
   }
 }
