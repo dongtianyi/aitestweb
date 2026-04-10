@@ -1,4 +1,4 @@
-// 全局样式 - 赛博运动美学
+// 全局样式 - 赛博运动美学 + UI/UX Pro Max
 
 * {
   margin: 0;
@@ -10,14 +10,21 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: default;
 }
 
 body {
-  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  font-family: 'Barlow', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
   background: #050507;
   color: #F3F4F6;
   line-height: 1.6;
   overflow-x: hidden;
+  cursor: default;
+}
+
+// 可点击元素光标
+a, button, .feature-card, .store-btn, [role="button"] {
+  cursor: pointer;
 }
 
 // 动态网格背景

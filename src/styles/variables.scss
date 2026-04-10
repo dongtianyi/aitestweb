@@ -1,10 +1,15 @@
-// Roodle 设计系统变量 - 赛博运动美学
-// 基于 frontend-design skill 原则
+// Roodle 设计系统变量 - 赛博运动美学 + UI/UX Pro Max
+// 基于 frontend-design + ui-ux-pro-max skill 原则
 
-// 主色 - 火焰渐变系
+// 主色 - 火焰渐变系（活力橙色调）
 $volt-yellow: #FFE600;        // 能量黄
 $electric-orange: #FF5500;    // 电光橙
 $plasma-red: #FF1E3F;         // 等离子红
+
+// UI/UX Pro Max 推荐配色
+$primary-orange: #F97316;     // 主橙色（活力）
+$secondary-orange: #FB923C;   // 辅助橙
+$success-green: #22C55E;      // CTA 成功绿
 
 // 辅助色 - 科技渐变系
 $cyber-blue: #00F0FF;         // 赛博蓝
@@ -68,10 +73,10 @@ $shadow-red: 0 8px 32px rgba(227, 25, 55, 0.4);
 // 毛玻璃效果
 $backdrop-blur: blur(20px) saturate(180%);
 
-// 字体家族 - 赛博运动美学
-$font-display: 'Bebas Neue', 'Noto Sans SC', '思源黑体', sans-serif;  // 标题字体
+// 字体家族 - 赛博运动美学 + UI/UX Pro Max
+$font-display: 'Bebas Neue', 'Barlow Condensed', 'Noto Sans SC', '思源黑体', sans-serif;  // 标题字体
 $font-mono: 'JetBrains Mono', 'Fira Code', monospace;                 // 数据/代码
-$font-body: 'Noto Sans SC', '思源黑体', -apple-system, BlinkMacSystemFont, sans-serif;  // 正文
+$font-body: 'Barlow', 'Noto Sans SC', '思源黑体', -apple-system, BlinkMacSystemFont, sans-serif;  // 正文
 
 // 字体家族 - 保留兼容
 $font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Noto Sans SC', '思源黑体', sans-serif;

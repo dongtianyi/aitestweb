@@ -61,7 +61,7 @@
   }
   
   .download-title {
-    font-family: 'Bebas Neue', 'Noto Sans SC', sans-serif;
+    font-family: 'Bebas Neue', 'Barlow Condensed', 'Noto Sans SC', sans-serif;
     font-size: clamp(48px, 7vw, 96px);
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -71,7 +71,9 @@
   }
   
   .download-subtitle {
+    font-family: 'Barlow', 'Noto Sans SC', sans-serif;
     font-size: 20px;
+    font-weight: 400;
     color: rgba(5, 5, 7, 0.8);
     margin-bottom: 56px;
     max-width: 600px;
@@ -100,6 +102,7 @@
     border-radius: 18px;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
     
     &:hover {
       transform: translateY(-6px) scale(1.03);

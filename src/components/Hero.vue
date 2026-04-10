@@ -222,7 +222,7 @@ onUnmounted(() => {
   }
   
   .hero-title {
-    font-family: 'Bebas Neue', 'Noto Sans SC', sans-serif;
+    font-family: 'Bebas Neue', 'Barlow Condensed', 'Noto Sans SC', sans-serif;
     font-size: clamp(56px, 9vw, 112px);
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -256,10 +256,11 @@ onUnmounted(() => {
   }
   
   .hero-subtitle {
+    font-family: 'Barlow', 'Noto Sans SC', sans-serif;
     font-size: 20px;
+    font-weight: 400;
     color: $text-secondary;
     margin-bottom: 48px;
-    font-weight: 300;
     max-width: 540px;
     line-height: 1.9;
     
@@ -291,7 +292,7 @@ onUnmounted(() => {
       font-weight: 700;
       font-size: 16px;
       text-decoration: none;
-      transition: all $transition-base;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
       
@@ -316,7 +317,7 @@ onUnmounted(() => {
       }
       
       svg {
-        transition: transform $transition-base;
+        transition: transform 0.3s ease;
       }
       
       &:hover svg {
@@ -336,7 +337,7 @@ onUnmounted(() => {
       font-weight: 600;
       font-size: 16px;
       text-decoration: none;
-      transition: all $transition-base;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       
       &:hover {
         border-color: $cyber-blue;

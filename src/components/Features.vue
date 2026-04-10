@@ -233,7 +233,7 @@ onUnmounted(() => {
     }
     
     .feature-title {
-      font-family: 'Bebas Neue', 'Noto Sans SC', sans-serif;
+      font-family: 'Bebas Neue', 'Barlow Condensed', 'Noto Sans SC', sans-serif;
       font-size: 28px;
       font-weight: 700;
       letter-spacing: 0.05em;
@@ -244,8 +244,10 @@ onUnmounted(() => {
     }
     
     .feature-description {
+      font-family: 'Barlow', 'Noto Sans SC', sans-serif;
       color: $text-secondary;
       font-size: 16px;
+      font-weight: 400;
       line-height: 1.9;
       position: relative;
       z-index: 1;
