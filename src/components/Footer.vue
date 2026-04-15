@@ -8,8 +8,8 @@
         </div>
         
         <div class="footer-links">
-          <a href="#" class="footer-link">隐私政策</a>
-          <a href="#" class="footer-link">使用条款</a>
+          <a href="/privacy-policy.html" class="footer-link" target="_blank">隐私政策</a>
+          <a href="/privacy-policy.html" class="footer-link" target="_blank">使用条款</a>
           <a href="#" class="footer-link">联系我们</a>
         </div>
         

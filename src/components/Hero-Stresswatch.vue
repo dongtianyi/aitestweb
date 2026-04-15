@@ -129,7 +129,7 @@
     span {
       font-size: $text-sm;
       font-weight: $font-medium;
-      color: $primary-blue;
+      color: $primary-green;
     }
   }
   
@@ -150,7 +150,7 @@
     }
     
     .text-gradient {
-      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      background: linear-gradient(135deg, $primary-green 0%, #5AC8FA 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -190,7 +190,7 @@
     }
     
     .btn-primary {
-      background: #007AFF;
+      background: $primary-green;
       color: #FFFFFF;
       padding: 16px 32px;
       border-radius: 14px;
@@ -201,12 +201,12 @@
       align-items: center;
       gap: 8px;
       transition: all $transition-base;
-      box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
+      box-shadow: 0 4px 16px rgba($primary-green, 0.3);
       
       &:hover {
-        background: #0056CC;
+        background: darken($primary-green, 10%);
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(0, 122, 255, 0.4);
+        box-shadow: 0 8px 24px rgba($primary-green, 0.4);
       }
       
       svg {
@@ -259,7 +259,7 @@
       .trust-number {
         font-size: $text-3xl;
         font-weight: $font-bold;
-        color: $primary-blue;
+        color: $primary-green;
         line-height: 1;
       }
       

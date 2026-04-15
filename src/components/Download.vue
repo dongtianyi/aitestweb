@@ -25,21 +25,6 @@
             <span class="qr-label">扫码下载</span>
           </div>
         </div>
-        
-        <div class="download-meta">
-          <div class="meta-item">
-            <span class="meta-icon">📱</span>
-            <span>iOS 15.0+</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-icon">💾</span>
-            <span>156 MB</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-icon">🌐</span>
-            <span>简体中文</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -80,7 +65,7 @@
       }
       
       .text-gradient {
-        background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+        background: linear-gradient(135deg, $primary-green 0%, #5AC8FA 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -103,7 +88,6 @@
     border-radius: $radius-2xl;
     padding: 40px;
     box-shadow: $shadow-xl;
-    border: 1px solid $border-light;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,7 +103,7 @@
   }
   
   .store-btn {
-    background: #000000;
+    background: $primary-green;
     color: #FFFFFF;
     padding: 16px 32px;
     border-radius: 14px;
@@ -131,8 +115,9 @@
     min-width: 240px;
     
     &:hover {
+      background: darken($primary-green, 10%);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 24px rgba($primary-green, 0.3);
     }
     
     .store-icon {
@@ -183,30 +168,6 @@
     .qr-label {
       font-size: $text-sm;
       color: $text-secondary;
-    }
-  }
-  
-  .download-meta {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    margin-top: 48px;
-    
-    @media (max-width: $breakpoint-sm) {
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    
-    .meta-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: $text-sm;
-      color: $text-secondary;
-      
-      .meta-icon {
-        font-size: 20px;
-      }
     }
   }
 }

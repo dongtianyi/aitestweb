@@ -1,14 +1,14 @@
 <template>
   <nav class="navbar" :class="{ 'scrolled': isScrolled }">
+    <!-- 固定左上角图标 -->
+    <div class="fixed-logo">
+      <img src="/logo.jpg" alt="Roodle" class="fixed-logo-icon" />
+    </div>
+    
     <div class="navbar-container">
-      <a href="#" class="logo">
-        <span class="logo-text">Roodle</span>
-      </a>
-      
       <ul class="nav-links">
         <li><a href="#features">功能</a></li>
         <li><a href="#advantages">优势</a></li>
-        <li><a href="#reviews">评价</a></li>
         <li><a href="#about">关于</a></li>
       </ul>
       
@@ -38,6 +38,37 @@ onUnmounted(() => {
 <style lang="scss">
 @import '../styles/variables-stresswatch.scss';
 
+// 固定左上角图标
+.fixed-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  
+  .fixed-logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    transition: all $transition-base;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      width: 40px;
+      height: 40px;
+      padding: 6px;
+    }
+  }
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -63,21 +94,11 @@ onUnmounted(() => {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 32px;
     
     @media (max-width: $breakpoint-md) {
       padding: 0 16px;
-    }
-  }
-  
-  .logo {
-    text-decoration: none;
-    
-    .logo-text {
-      font-size: 24px;
-      font-weight: 700;
-      color: $text-primary;
-      letter-spacing: -0.02em;
     }
   }
   
@@ -104,7 +125,7 @@ onUnmounted(() => {
   }
   
   .btn-download {
-    background: #007AFF;
+    background: $primary-green;
     color: #FFFFFF;
     padding: 10px 20px;
     border-radius: 12px;
@@ -114,7 +135,7 @@ onUnmounted(() => {
     transition: all $transition-base;
     
     &:hover {
-      background: #0056CC;
+      background: darken($primary-green, 10%);
       transform: translateY(-1px);
     }
     

@@ -7,7 +7,7 @@
       </div>
       
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card highlight">
           <div class="feature-icon-wrapper">
             <div class="feature-icon">📅</div>
           </div>
@@ -35,7 +35,7 @@
           </ul>
         </div>
         
-        <div class="feature-card">
+        <div class="feature-card highlight">
           <div class="feature-icon-wrapper">
             <div class="feature-icon">🏃</div>
           </div>
@@ -45,21 +45,6 @@
             <li><span class="check">✓</span> 赛事日历</li>
             <li><span class="check">✓</span> 报名提醒</li>
             <li><span class="check">✓</span> 路线图查看</li>
-            <li><span class="check">✓</span> 行程规划</li>
-          </ul>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <div class="feature-icon">🔄</div>
-          </div>
-          <h3 class="feature-title">设备同步</h3>
-          <p class="feature-desc">无缝连接 Apple Health、Garmin 等主流设备</p>
-          <ul class="feature-list">
-            <li><span class="check">✓</span> Apple Health</li>
-            <li><span class="check">✓</span> Garmin</li>
-            <li><span class="check">✓</span> 自动同步</li>
-            <li><span class="check">✓</span> 数据整合</li>
           </ul>
         </div>
       </div>
@@ -98,8 +83,8 @@
     
     .section-tag {
       display: inline-block;
-      background: rgba(0, 122, 255, 0.1);
-      color: $primary-blue;
+      background: rgba($primary-green, 0.1);
+      color: $primary-green;
       padding: 6px 16px;
       border-radius: $radius-full;
       font-size: $text-sm;
@@ -145,11 +130,11 @@
     }
     
     &.highlight {
-      border: 2px solid $primary-blue;
+      border: 2px solid $primary-green;
       
       .feature-badge {
         display: inline-block;
-        background: $primary-blue;
+        background: $primary-green;
         color: #FFFFFF;
         padding: 4px 12px;
         border-radius: $radius-full;

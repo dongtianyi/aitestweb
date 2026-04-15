@@ -1,5 +1,7 @@
 // 全局样式 - StressWatch 风格（iOS 极简）
 
+@import './variables-stresswatch.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +46,7 @@ a, button, .feature-card, .store-btn, [role="button"] {
 
 // 工具类
 .text-gradient {
-  background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+  background: linear-gradient(135deg, $primary-green 0%, #5AC8FA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -56,7 +58,7 @@ a, button, .feature-card, .store-btn, [role="button"] {
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
-  background: #007AFF;
+  background: $primary-green;
   color: #FFFFFF;
   border-radius: 12px;
   font-size: 17px;
@@ -66,7 +68,7 @@ a, button, .feature-card, .store-btn, [role="button"] {
   border: none;
   
   &:hover {
-    background: #0056CC;
+    background: darken($primary-green, 10%);
     transform: scale(1.02);
   }
   
@@ -97,12 +99,12 @@ a, button, .feature-card, .store-btn, [role="button"] {
 
 // 选中文本
 ::selection {
-  background: rgba(0, 122, 255, 0.2);
+  background: rgba($primary-green, 0.2);
 }
 
 // 焦点样式
 :focus-visible {
-  outline: 2px solid #007AFF;
+  outline: 2px solid $primary-green;
   outline-offset: 2px;
 }
 

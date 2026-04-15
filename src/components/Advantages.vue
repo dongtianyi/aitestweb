@@ -43,10 +43,10 @@
 </script>
 
 <style scoped lang="scss">
-@import '../styles/variables.scss';
+@import '../styles/variables-stresswatch.scss';
 
 .advantages {
-  padding: 120px 0;
+  padding: 60px 0 120px 0;
   background: linear-gradient(180deg, $bg-primary 0%, $bg-secondary 100%);
   position: relative;
   
@@ -64,9 +64,8 @@
     
     .section-tag {
       display: inline-block;
-      background: linear-gradient(135deg, rgba(227, 25, 55, 0.15), rgba(196, 22, 47, 0.1));
-      border: 1px solid rgba(227, 25, 55, 0.3);
-      color: $text-accent;
+      background: rgba($primary-green, 0.1);
+      color: $primary-green;
       padding: 8px 20px;
       border-radius: $radius-full;
       font-size: $text-sm;
@@ -103,7 +102,7 @@
       background: linear-gradient(145deg, $bg-elevated 0%, $bg-tertiary 100%);
       border-radius: $radius-2xl;
       padding: 40px 32px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba($primary-green, 0.4);
       text-align: center;
       transition: all $transition-base;
       position: relative;
@@ -111,8 +110,8 @@
       
       &:hover {
         transform: translateY(-8px);
-        border-color: rgba(227, 25, 55, 0.3);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba($primary-green, 0.8);
+        box-shadow: 0 12px 40px rgba($primary-green, 0.2);
       }
       
       &::before {
@@ -122,7 +121,7 @@
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(227, 25, 55, 0.08) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba($primary-green, 0.08) 0%, transparent 70%);
         opacity: 0;
         transition: opacity $transition-base;
       }
@@ -137,7 +136,7 @@
         right: 24px;
         font-size: 48px;
         font-weight: $font-bold;
-        color: rgba(227, 25, 55, 0.15);
+        color: rgba($primary-green, 0.15);
         line-height: 1;
       }
       
